@@ -36,7 +36,7 @@ try:
     scaler = joblib.load('model/feature_scaler.joblib')
     print("Loaded saved scaler from training.")
 except FileNotFoundError:
-    raise FileNotFoundError("Scalerul salvat nu a fost găsit! Rulează antrenarea modelului pentru a genera 'feature_scaler.joblib'.")
+    raise FileNotFoundError("The saved scaler was not found! Run model training to generate 'feature_scaler.joblib'.")
 
 scaled_features = scaler.transform(df[feature_columns])
 
