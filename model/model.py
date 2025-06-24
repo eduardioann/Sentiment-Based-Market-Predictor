@@ -68,7 +68,6 @@ def add_technical_indicators(df):
     return df
 
 def add_sentiment_features(df):
-    """Add sentiment-based features to the DataFrame"""
     df['sentiment_ma_5'] = df['avg_sentiment'].rolling(window=5).mean()
     df['sentiment_ma_7'] = df['avg_sentiment'].rolling(window=7).mean()
     
